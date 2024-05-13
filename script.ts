@@ -1,20 +1,26 @@
 const recipe_filename = "./recipes.txt";
 
-// Open file
-const xhr = new XMLHttpRequest();
-xhr.open("GET", recipe_filename, true);
-xhr.onreadystatechange = () => {
-  if (xhr.readyState === XMLHttpRequest.DONE) {
-    if (xhr.status === 200) {
-      const fileContent = xhr.responseText;
-      console.log(fileContent);
-    } else {
-      console.error("Failed to load file");
+const load_file = function(filename: string): String {
+  let fileContent: String = "";
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", filename, true);
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        // const fileContent = xhr.responseText;
+        fileContent = xhr.responseText;
+      } else {
+        console.error("Failed to load file");
+      }
     }
-  }
-};
-console.log("Before thing");
-xhr.send();
+  };
+  xhr.send();
+  return fileContent;
+}
+
+const file_content = load_file(recipe_filename);
+const lines = file_content.split(/\r?\n/);
+console.log(lines);
 
 // let categories: String[] = [];
 

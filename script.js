@@ -1,20 +1,25 @@
 var recipe_filename = "./recipes.txt";
-// Open file
-var xhr = new XMLHttpRequest();
-xhr.open("GET", recipe_filename, true);
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-            var fileContent = xhr.responseText;
-            console.log(fileContent);
+var load_file = function (filename) {
+    var fileContent = "";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", filename, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                // const fileContent = xhr.responseText;
+                fileContent = xhr.responseText;
+            }
+            else {
+                console.error("Failed to load file");
+            }
         }
-        else {
-            console.error("Failed to load file");
-        }
-    }
+    };
+    xhr.send();
+    return fileContent;
 };
-console.log("Before thing");
-xhr.send();
+var file_content = load_file(recipe_filename);
+var lines = file_content.split(/\r?\n/);
+console.log(lines);
 // let categories: String[] = [];
 // let categories = ["Margaritas", "Cocktails", "Mocktails"];
 var recipes = {};
