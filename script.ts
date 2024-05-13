@@ -13,6 +13,7 @@ xhr.onreadystatechange = () => {
     }
   }
 };
+console.log("Before thing");
 xhr.send();
 
 // let categories: String[] = [];

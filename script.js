@@ -13,6 +13,7 @@ xhr.onreadystatechange = function () {
         }
     }
 };
+console.log("Before thing");
 xhr.send();
 // let categories: String[] = [];
 // let categories = ["Margaritas", "Cocktails", "Mocktails"];
