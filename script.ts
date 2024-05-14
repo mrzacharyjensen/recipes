@@ -26,11 +26,6 @@ const parse_file = function(file_content: String): Object {
   let current_recipe = "";
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    // if (line.slice(0,2) == "##") {
-    //   current_category = line.slice(3);
-    // } else if (line.slice(0,2) == "# ") {
-    //   current_recipe_name = line.slice(2);
-    // }
     switch (line.slice(0,2))   {
       case "##":
         if (current_category != "") {
@@ -66,19 +61,73 @@ const recipes = parse_file(file_content);
 console.log(recipes);
 
 var categoriesElement = document.getElementById("categories");
-// const fragment = document.createDocumentFragment();
-// const cat = fragment
-//     .appendChild(document.createElement("li"))
-// cat.textContent = "Thing";
-// categoriesElement.appendChild(cat)
+var recipesElement = document.getElementById("recipes");
+var recipeElement = document.getElementById("recipe");
 
 let categories = Object.keys(recipes);
-for (let i = 0; i < categories.length; i++) {
-  const category = categories[i];
-  
-  const fragment = document.createDocumentFragment();
-  const cat_element = fragment
+let selected_category = categories[0];
+
+let recipe_names = Object.keys(recipes[selected_category])
+let selected_recipe = recipe_names[0];
+
+const build_page = function(): void {
+  // Clear existing elements and rebuild
+  categoriesElement.innerHTML = "";
+  recipesElement.innerHTML = "";
+  recipeElement.innerHTML = "";
+
+  for (let i = 0; i < categories.length; i++) {
+    const category = categories[i];
+
+    const fragment = document.createDocumentFragment();
+    const cat_element = fragment
     .appendChild(document.createElement("li"))
-  cat_element.textContent = category;
-  categoriesElement.appendChild(cat_element)
+    cat_element.textContent = category;
+    if (category == selected_category) {
+      cat_element.classList.add("selected");
+    }
+    cat_element.onclick = () => {
+      selected_category = category;
+
+      recipe_names = Object.keys(recipes[selected_category]);
+      selected_recipe = recipe_names[0];
+
+      build_page();
+    }
+    categoriesElement.appendChild(cat_element);
+  }
+
+  console.log("Recipe names:");
+  console.log(recipe_names);
+
+  for (let i = 0; i < recipe_names.length; i++) {
+    const recipe_name = recipe_names[i];
+    
+    const fragment = document.createDocumentFragment();
+    const name_element = fragment
+      .appendChild(document.createElement("li"))
+    name_element.textContent = recipe_name;
+    if (recipe_name == selected_recipe) {
+      name_element.classList.add("selected")
+    }
+    name_element.onclick = () => {
+      selected_recipe = recipe_name;
+      build_page();
+    }
+    recipesElement.appendChild(name_element);
+  }
+
+  const recipe_lines = recipes[selected_category][selected_recipe].split(/\r?\n/);
+  for (let i = 0; i < recipe_lines.length; i++) {
+    const line = recipe_lines[i];
+
+    const fragment = document.createDocumentFragment();
+    const line_element = fragment
+      .appendChild(document.createElement("p"));
+    line_element.textContent = line;
+    recipeElement.appendChild(line_element);
+  }
+  // recipeElement.innerHTML = recipes[selected_category][selected_recipe];
 }
+
+build_page();
