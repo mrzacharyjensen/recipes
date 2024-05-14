@@ -1,8 +1,8 @@
-var recipe_filename = "./recipes.txt";
+var filename = "recipes.txt";
 var load_file = function (filename) {
-    var fileContent = "";
+    var fileContent = "blank";
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", filename, true);
+    xhr.open("GET", filename, false);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
@@ -15,9 +15,11 @@ var load_file = function (filename) {
         }
     };
     xhr.send();
+    console.log(fileContent);
     return fileContent;
 };
-var file_content = load_file(recipe_filename);
+var file_content = load_file(filename);
+console.log(file_content);
 var lines = file_content.split(/\r?\n/);
 console.log(lines);
 // let categories: String[] = [];

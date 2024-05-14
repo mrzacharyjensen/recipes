@@ -1,9 +1,9 @@
-const recipe_filename = "./recipes.txt";
+const filename = "recipes.txt";
 
 const load_file = function(filename: string): String {
-  let fileContent: String = "";
+  let fileContent: String = "blank";
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", filename, true);
+  xhr.open("GET", filename, false);
   xhr.onreadystatechange = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
@@ -18,9 +18,8 @@ const load_file = function(filename: string): String {
   return fileContent;
 }
 
-const file_content = load_file(recipe_filename);
+const file_content = load_file(filename);
 const lines = file_content.split(/\r?\n/);
-console.log(lines);
 
 // let categories: String[] = [];
 
