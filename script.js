@@ -76,6 +76,7 @@ var build_page = function () {
         if (category == selected_category) {
             cat_element.classList.add("selected");
         }
+        cat_element.classList.add("category");
         cat_element.onclick = function () {
             selected_category = category;
             recipe_names = Object.keys(recipes[selected_category]);
@@ -98,6 +99,7 @@ var build_page = function () {
         if (recipe_name == selected_recipe) {
             name_element.classList.add("selected");
         }
+        name_element.classList.add("recipe_name");
         name_element.onclick = function () {
             selected_recipe = recipe_name;
             build_page();

@@ -6,6 +6,7 @@
 
 # Fruit Margarita
 Fruit
+Margarita
 
 ## Cocktails
 
@@ -18,8 +19,8 @@ Summer
 # LLB
 Lemon
 Lime
-Bitters
+Bitterness
 
 # Peacherita
 Peach
-Margarita - Marga
+Margarita without the Marga

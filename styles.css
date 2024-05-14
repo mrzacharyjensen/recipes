@@ -1,3 +1,32 @@
+body {
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .selected {
-  color: blue;
+  /* color: blue; */
+  background-color: cornflowerblue;
+}
+
+#categories {
+  display: flex;
+}
+
+.category {
+  padding: 30px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+#recipes {
+  display: flex;
+}
+
+.recipe_name {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
 }

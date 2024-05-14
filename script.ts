@@ -86,6 +86,7 @@ const build_page = function(): void {
     if (category == selected_category) {
       cat_element.classList.add("selected");
     }
+    cat_element.classList.add("category");
     cat_element.onclick = () => {
       selected_category = category;
 
@@ -108,8 +109,9 @@ const build_page = function(): void {
       .appendChild(document.createElement("li"))
     name_element.textContent = recipe_name;
     if (recipe_name == selected_recipe) {
-      name_element.classList.add("selected")
+      name_element.classList.add("selected");
     }
+    name_element.classList.add("recipe_name");
     name_element.onclick = () => {
       selected_recipe = recipe_name;
       build_page();
