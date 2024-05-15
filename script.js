@@ -1,4 +1,4 @@
-var filename = "recipes.txt";
+var recipes_file = "recipes.txt";
 var load_file = function (filename) {
     var fileContent = "blank";
     var xhr = new XMLHttpRequest();
@@ -52,7 +52,7 @@ var parse_file = function (file_content) {
     recipes[current_category][current_recipe_name] = current_recipe;
     return recipes;
 };
-var file_content = load_file(filename);
+var file_content = load_file(recipes_file);
 var recipes = parse_file(file_content);
 console.log(recipes);
 var categoriesElement = document.getElementById("categories");
@@ -64,9 +64,7 @@ var recipe_names = Object.keys(recipes[selected_category]);
 var selected_recipe = recipe_names[0];
 var build_page = function () {
     // Clear existing elements and rebuild
-    categoriesElement.innerHTML = "";
-    recipesElement.innerHTML = "";
-    recipeElement.innerHTML = "";
+    // categoriesElement.innerHTML = "";
     var _loop_1 = function (i) {
         var category = categories[i];
         var fragment = document.createDocumentFragment();
@@ -77,19 +75,29 @@ var build_page = function () {
             cat_element.classList.add("selected");
         }
         cat_element.classList.add("category");
-        cat_element.onclick = function () {
+        cat_element.classList.add("button");
+        cat_element.onclick = function (e) {
+            categoriesElement === null || categoriesElement === void 0 ? void 0 : categoriesElement.getElementsByClassName("selected")[0].classList.remove("selected");
             selected_category = category;
+            var element = e.target;
+            element.classList.add("selected");
             recipe_names = Object.keys(recipes[selected_category]);
             selected_recipe = recipe_names[0];
-            build_page();
+            // build_page();
+            build_recipes();
         };
-        categoriesElement.appendChild(cat_element);
+        categoriesElement === null || categoriesElement === void 0 ? void 0 : categoriesElement.appendChild(cat_element);
     };
     for (var i = 0; i < categories.length; i++) {
         _loop_1(i);
     }
-    console.log("Recipe names:");
-    console.log(recipe_names);
+    // console.log("Recipe names:");
+    // console.log(recipe_names);
+    build_recipes();
+    // recipeElement.innerHTML = recipes[selected_category][selected_recipe];
+};
+var build_recipes = function () {
+    recipesElement.innerHTML = "";
     var _loop_2 = function (i) {
         var recipe_name = recipe_names[i];
         var fragment = document.createDocumentFragment();
@@ -100,15 +108,23 @@ var build_page = function () {
             name_element.classList.add("selected");
         }
         name_element.classList.add("recipe_name");
-        name_element.onclick = function () {
+        name_element.classList.add("button");
+        name_element.onclick = function (e) {
+            recipesElement === null || recipesElement === void 0 ? void 0 : recipesElement.getElementsByClassName("selected")[0].classList.remove("selected");
             selected_recipe = recipe_name;
-            build_page();
+            var element = e.target;
+            element.classList.add("selected");
+            show_recipe();
         };
-        recipesElement.appendChild(name_element);
+        recipesElement === null || recipesElement === void 0 ? void 0 : recipesElement.appendChild(name_element);
     };
     for (var i = 0; i < recipe_names.length; i++) {
         _loop_2(i);
     }
+    show_recipe();
+};
+var show_recipe = function () {
+    recipeElement.innerHTML = "";
     var recipe_lines = recipes[selected_category][selected_recipe].split(/\r?\n/);
     for (var i = 0; i < recipe_lines.length; i++) {
         var line = recipe_lines[i];
@@ -116,8 +132,7 @@ var build_page = function () {
         var line_element = fragment
             .appendChild(document.createElement("p"));
         line_element.textContent = line;
-        recipeElement.appendChild(line_element);
+        recipeElement === null || recipeElement === void 0 ? void 0 : recipeElement.appendChild(line_element);
     }
-    // recipeElement.innerHTML = recipes[selected_category][selected_recipe];
 };
 build_page();

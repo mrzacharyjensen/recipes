@@ -1,4 +1,4 @@
-const filename = "recipes.txt";
+const recipes_file = "recipes.txt";
 
 const load_file = function(filename: string): String {
   let fileContent: String = "blank";
@@ -55,7 +55,7 @@ const parse_file = function(file_content: String): Object {
   return recipes;
 }
 
-const file_content = load_file(filename);
+const file_content = load_file(recipes_file);
 const recipes = parse_file(file_content);
 
 console.log(recipes);
@@ -72,9 +72,7 @@ let selected_recipe = recipe_names[0];
 
 const build_page = function(): void {
   // Clear existing elements and rebuild
-  categoriesElement.innerHTML = "";
-  recipesElement.innerHTML = "";
-  recipeElement.innerHTML = "";
+  // categoriesElement.innerHTML = "";
 
   for (let i = 0; i < categories.length; i++) {
     const category = categories[i];
@@ -87,19 +85,32 @@ const build_page = function(): void {
       cat_element.classList.add("selected");
     }
     cat_element.classList.add("category");
-    cat_element.onclick = () => {
+    cat_element.classList.add("button");
+    cat_element.onclick = (e) => {
+      categoriesElement?.getElementsByClassName("selected")[0].classList.remove("selected");
       selected_category = category;
+      const element = e.target as HTMLElement;
+      element.classList.add("selected");
 
       recipe_names = Object.keys(recipes[selected_category]);
       selected_recipe = recipe_names[0];
 
-      build_page();
+      // build_page();
+      build_recipes();
     }
-    categoriesElement.appendChild(cat_element);
+    categoriesElement?.appendChild(cat_element);
   }
 
-  console.log("Recipe names:");
-  console.log(recipe_names);
+  // console.log("Recipe names:");
+  // console.log(recipe_names);
+
+  build_recipes();
+
+  // recipeElement.innerHTML = recipes[selected_category][selected_recipe];
+}
+
+const build_recipes = function() {
+  recipesElement.innerHTML = "";
 
   for (let i = 0; i < recipe_names.length; i++) {
     const recipe_name = recipe_names[i];
@@ -112,12 +123,23 @@ const build_page = function(): void {
       name_element.classList.add("selected");
     }
     name_element.classList.add("recipe_name");
-    name_element.onclick = () => {
+    name_element.classList.add("button");
+    name_element.onclick = (e) => {
+      recipesElement?.getElementsByClassName("selected")[0].classList.remove("selected");
       selected_recipe = recipe_name;
-      build_page();
+      const element = e.target as HTMLElement;
+      element.classList.add("selected");
+
+      show_recipe();
     }
-    recipesElement.appendChild(name_element);
+    recipesElement?.appendChild(name_element);
   }
+
+  show_recipe();
+}
+
+const show_recipe = function() {
+  recipeElement.innerHTML = "";
 
   const recipe_lines = recipes[selected_category][selected_recipe].split(/\r?\n/);
   for (let i = 0; i < recipe_lines.length; i++) {
@@ -127,9 +149,8 @@ const build_page = function(): void {
     const line_element = fragment
       .appendChild(document.createElement("p"));
     line_element.textContent = line;
-    recipeElement.appendChild(line_element);
+    recipeElement?.appendChild(line_element);
   }
-  // recipeElement.innerHTML = recipes[selected_category][selected_recipe];
 }
 
 build_page();
