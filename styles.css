@@ -8,9 +8,12 @@ ul {
   list-style-type: none;
 }
 
+.container {
+  display: flex;
+}
+
 .button {
   padding: 20px;
-  margin: 10px;
   border-radius: 10px;
   background-color: black;
   color: white;
@@ -28,12 +31,22 @@ ul {
 }
 
 .category {
+  margin: 20px;
+  text-align: center;
+  flex-grow: 1;
 }
 
 #recipes {
   display: flex;
+  flex-direction: column;
 }
 
 .recipe_name {
-  
+  margin: 10px;
+  width: 220px;
+}
+
+#recipe {
+  flex-grow: 1;
+  text-align: center;
 }
