@@ -1,26 +1,198 @@
 ## Margaritas
 
 # Classic Margarita
+1/2 Salt Rim
 30ml Tequila
 15ml Triple Sec
+60ml Sour Mix
+10ml Agave Syrup (optional)
 
 # Fruit Margarita
-Fruit
-Margarita
+No Rim
+30ml Tequila
+15ml Triple Sec
+30ml Sour Mix
+30ml Fruit Syrup
+
+# Mango Picante
+1/2 Chili Salt Rim
+30ml Tequila
+15ml Triple Sec
+2 slices Jalapeño
+15ml Mango Syrup
+60ml Mango Juice
+45ml Sour Mix
+
+# Tropical Blue
+1/2 Salt Rim
+30ml Tequila
+15ml Blue Curaçao
+15ml Sour Mix
+45ml Colada Mix
+
+# Watermelon Sugar
+1/2 Salt Rim
+30ml Tequila
+15ml Watermelon Liqueur
+15ml Watermelon Syrup
+60ml Sour Mix
+
+# Passionate Kiwi
+1/2 Salt Rim
+30ml Tequila
+15ml Triple Sec
+15ml Passionfruit Syrup
+60ml Sour Mix
+15ml Kiwi Syrup
+
+# Pomegranate Margarita
+1/2 Salt Rim
+30ml Tequila
+15ml Triple Sec
+30ml Pomegranate Syrup
+10ml Agave Syrup
+60ml Sour Mix
+
+# Lychee Margarita
+30ml Tequila
+15ml Triple Sec
+30ml Lychee Syrup
+45ml Sour Mix
+
+# Classic Mezcal Margarita
+1/2 Chili Salt Rim
+30ml Mezcal
+15ml Triple Sec
+60ml Sour Mix
+
+# Mezcalita
+1/2 Chili Salt Rim
+30ml Mezcal
+15ml Triple Sec
+15ml Pineapple Syrup
+30ml Pineapple Juice
+15ml Sour Mix
+
+# Cadiliac
+1/2 Salt Rim
+30ml Tequila
+15ml Grand Marnier + 10ml to float
+60ml Sour Mix
+15ml Agave Syrup
 
 ## Cocktails
 
 # Mexican Summer
-Mexico
-Summer
+45ml Tequila
+30ml Sour Mix
+30ml Pineapple Juice
+20ml Mango Syrup
+
+# Peachy Ginger
+45ml Gin
+15ml Peach Syrup
+15ml Sour Mix
+4 drops Fomo
+15ml Tonic Water
+Top up Ginger Beer
+Dried Lemon Garnish
+
+# Passionfruit Caprioska
+45ml Vodka
+30ml Passionfruit Syrup
+30ml Sour Mix
+2 Lemon Slices Muddled
+
+# Flamingo
+30ml White Rum
+15ml Strawberry Liqueur
+30ml Pineapple Juice
+45ml Colada Mix
+10ml Strawberry Syrup
+
+# Espresso Martini
+Double Shot Espresso
+45ml Gold Rum
+30ml Vanilla Syrup
+
+# Margarita Milkshake
+30ml Tequila
+30ml Triple Sec
+2 scoops Vanilla Ice Cream
+60ml Milk
+30ml Strawberry Syrup
+
+## Sangrias
+
+# Red Sangria Glass
+30ml Orange Juice
+15ml Triple Sec
+15ml Sugar Syrup
+15ml Sour Mix
+100ml Red Wine
+
+# Red Sangria Jug
+90ml Orange Juice
+60ml Triple Sec
+60ml Sugar Syrup
+60ml Sour Mix
+300ml Red Wine
+
+# White Sangria Glass
+30ml Pineapple Juice
+15ml Triple Sec
+15ml Sugar Syrup
+15ml Sour Mix
+100ml White Wine
+
+# White Sangria Jug
+90ml Pineapple Juice
+60ml Triple Sec
+60ml Sugar Syrup
+60ml Sour Mix
+300ml White Wine
+
+# Rosé Sangria Glass
+30ml Cranberry Juice
+15ml Triple Sec
+15ml Sugar Syrup
+15ml Sour Mix
+100ml Rosé Wine
+
+# Rosé Sangria Jug
+90ml Cranberry Juice
+60ml Triple Sec
+60ml Sugar Syrup
+60ml Sour Mix
+300ml Rosé Wine
 
 ## Mocktails
 
-# LLB
-Lemon
-Lime
-Bitterness
+# M-7
+Swirl Berry Syrup in glass
+30ml Sugar Syrup
+Top up M7 Mix
+
+# Agua Berry Fresca
+15ml Watermelon Syrup
+15ml Strawberry Syrup
+1/2 Top up Soda Water
+1/2 Top up Lemonade
+
+# Colada
+30ml Pineapple Juice
+Top up Colada Mix
 
 # Peacherita
-Peach
-Margarita without the Marga
+30ml Peach Syrup
+60ml Apple Juice
+Top up Ginger Ale
+
+## Other
+
+# Michelada
+Salt Rim
+60ml Tomato Juice
+60ml Lemon Juice
+4 Limes
+Top up Sol
