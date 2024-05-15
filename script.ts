@@ -160,7 +160,7 @@ const scroll_down = document.getElementById("scroll-down");
 scroll_down?.addEventListener("click", function() {
   // recipesElement.scrollTop += 400;
 
-  const scroll_amount = 400;
+  const scroll_amount = 350;
   const current_scroll = recipesElement.scrollTop;
   const target_scroll = current_scroll + scroll_amount;
   const duration = 200;
@@ -184,7 +184,7 @@ const scroll_up = document.getElementById("scroll-up");
 scroll_up?.addEventListener("click", function() {
   // recipesElement.scrollTop -= 400;
 
-  const scroll_amount = 400;
+  const scroll_amount = 350;
   const current_scroll = recipesElement.scrollTop;
   const target_scroll = current_scroll - scroll_amount;
   const duration = 200;
