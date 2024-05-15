@@ -83,6 +83,7 @@ var build_page = function () {
             element.classList.add("selected");
             recipe_names = Object.keys(recipes[selected_category]);
             selected_recipe = recipe_names[0];
+            recipesElement.scrollTop = 0;
             // build_page();
             build_recipes();
         };
@@ -107,7 +108,7 @@ var build_recipes = function () {
         if (recipe_name == selected_recipe) {
             name_element.classList.add("selected");
         }
-        name_element.classList.add("recipe_name");
+        name_element.classList.add("recipe_button");
         name_element.classList.add("button");
         name_element.onclick = function (e) {
             recipesElement === null || recipesElement === void 0 ? void 0 : recipesElement.getElementsByClassName("selected")[0].classList.remove("selected");
@@ -136,3 +137,39 @@ var show_recipe = function () {
     }
 };
 build_page();
+var scroll_down = document.getElementById("scroll-down");
+scroll_down === null || scroll_down === void 0 ? void 0 : scroll_down.addEventListener("click", function () {
+    // recipesElement.scrollTop += 400;
+    var scroll_amount = 400;
+    var current_scroll = recipesElement.scrollTop;
+    var target_scroll = current_scroll + scroll_amount;
+    var duration = 200;
+    var start_time = performance.now();
+    function scroll_step(timestamp) {
+        var elapsed = timestamp - start_time;
+        var progress = Math.min(elapsed / duration, 1);
+        recipesElement.scrollTop = current_scroll + (target_scroll - current_scroll) * progress;
+        if (progress < 1) {
+            requestAnimationFrame(scroll_step);
+        }
+    }
+    requestAnimationFrame(scroll_step);
+});
+var scroll_up = document.getElementById("scroll-up");
+scroll_up === null || scroll_up === void 0 ? void 0 : scroll_up.addEventListener("click", function () {
+    // recipesElement.scrollTop -= 400;
+    var scroll_amount = 400;
+    var current_scroll = recipesElement.scrollTop;
+    var target_scroll = current_scroll - scroll_amount;
+    var duration = 200;
+    var start_time = performance.now();
+    function scroll_step(timestamp) {
+        var elapsed = timestamp - start_time;
+        var progress = Math.min(elapsed / duration, 1);
+        recipesElement.scrollTop = current_scroll + (target_scroll - current_scroll) * progress;
+        if (progress < 1) {
+            requestAnimationFrame(scroll_step);
+        }
+    }
+    requestAnimationFrame(scroll_step);
+});

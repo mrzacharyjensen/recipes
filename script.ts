@@ -94,6 +94,7 @@ const build_page = function(): void {
 
       recipe_names = Object.keys(recipes[selected_category]);
       selected_recipe = recipe_names[0];
+      recipesElement.scrollTop = 0;
 
       // build_page();
       build_recipes();
@@ -122,7 +123,7 @@ const build_recipes = function() {
     if (recipe_name == selected_recipe) {
       name_element.classList.add("selected");
     }
-    name_element.classList.add("recipe_name");
+    name_element.classList.add("recipe_button");
     name_element.classList.add("button");
     name_element.onclick = (e) => {
       recipesElement?.getElementsByClassName("selected")[0].classList.remove("selected");
@@ -154,3 +155,51 @@ const show_recipe = function() {
 }
 
 build_page();
+
+const scroll_down = document.getElementById("scroll-down");
+scroll_down?.addEventListener("click", function() {
+  // recipesElement.scrollTop += 400;
+
+  const scroll_amount = 400;
+  const current_scroll = recipesElement.scrollTop;
+  const target_scroll = current_scroll + scroll_amount;
+  const duration = 200;
+
+  const start_time = performance.now();
+
+  function scroll_step(timestamp) {
+    const elapsed = timestamp - start_time;
+    const progress = Math.min(elapsed / duration, 1);
+    recipesElement.scrollTop = current_scroll + (target_scroll - current_scroll) * progress;
+
+    if (progress < 1) {
+      requestAnimationFrame(scroll_step);
+    }
+  }
+
+  requestAnimationFrame(scroll_step);
+})
+
+const scroll_up = document.getElementById("scroll-up");
+scroll_up?.addEventListener("click", function() {
+  // recipesElement.scrollTop -= 400;
+
+  const scroll_amount = 400;
+  const current_scroll = recipesElement.scrollTop;
+  const target_scroll = current_scroll - scroll_amount;
+  const duration = 200;
+
+  const start_time = performance.now();
+
+  function scroll_step(timestamp) {
+    const elapsed = timestamp - start_time;
+    const progress = Math.min(elapsed / duration, 1);
+    recipesElement.scrollTop = current_scroll + (target_scroll - current_scroll) * progress;
+
+    if (progress < 1) {
+      requestAnimationFrame(scroll_step);
+    }
+  }
+
+  requestAnimationFrame(scroll_step);
+})
