@@ -65,6 +65,7 @@ ul {
 .recipe_button {
   margin: 10px;
   width: 220px;
+  min-height: 23px;
 }
 
 .scroll_wrapper {
@@ -74,6 +75,10 @@ ul {
 
 .scroll_button {
   width: 220px;
+}
+
+.scroll_button:active {
+  transform: scale(1.2);
 }
 
 #recipe {

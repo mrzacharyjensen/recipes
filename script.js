@@ -140,7 +140,7 @@ build_page();
 var scroll_down = document.getElementById("scroll-down");
 scroll_down === null || scroll_down === void 0 ? void 0 : scroll_down.addEventListener("click", function () {
     // recipesElement.scrollTop += 400;
-    var scroll_amount = 350;
+    var scroll_amount = 336;
     var current_scroll = recipesElement.scrollTop;
     var target_scroll = current_scroll + scroll_amount;
     var duration = 200;
@@ -158,7 +158,7 @@ scroll_down === null || scroll_down === void 0 ? void 0 : scroll_down.addEventLi
 var scroll_up = document.getElementById("scroll-up");
 scroll_up === null || scroll_up === void 0 ? void 0 : scroll_up.addEventListener("click", function () {
     // recipesElement.scrollTop -= 400;
-    var scroll_amount = 350;
+    var scroll_amount = 336;
     var current_scroll = recipesElement.scrollTop;
     var target_scroll = current_scroll - scroll_amount;
     var duration = 200;
