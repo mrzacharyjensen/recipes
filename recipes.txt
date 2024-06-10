@@ -6,6 +6,7 @@
 15ml Triple Sec
 60ml Sour Mix
 10ml Agave Syrup (optional)
+Dried Lemon Garnish
 
 # Fruit Margarita
 No Rim
@@ -22,6 +23,7 @@ No Rim
 15ml Mango Syrup
 60ml Mango Juice
 45ml Sour Mix
+Dried Lemon Garnish
 
 # Tropical Blue
 1/2 Salt Rim
@@ -196,3 +198,14 @@ Salt Rim
 60ml Lemon Juice
 4 Limes
 Top up Sol
+
+# Cuba Libre
+Tall Glass
+30ml Gold Rum
+30ml Lime Juice
+30ml Sugar Syrup
+Top up Coke
+
+# Mexican Hot Chocolate
+3 heaped tablespoons Hot Chocolate Powder
+Top up Frothed Milk
