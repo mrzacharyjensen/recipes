@@ -114,8 +114,15 @@ Dried Lemon Garnish
 
 # Espresso Martini
 Double Shot Espresso
-45ml Gold Rum
+30ml Gold Rum
+15ml Kahlua
 30ml Vanilla Syrup
+
+# Mexspresso Martini
+Double Shot Espresso
+30ml Tequila
+15ml Kahlua
+30ml Agave Syrup
 
 # Margarita Milkshake
 30ml Tequila
