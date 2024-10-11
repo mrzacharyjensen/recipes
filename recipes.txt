@@ -15,22 +15,23 @@ No Rim
 30ml Sour Mix
 30ml Fruit Syrup
 
-# Mango Picante
+# Spicy Guava
 1/2 Chili Salt Rim
 30ml Tequila
 15ml Triple Sec
 2 slices Jalapeño
-15ml Mango Syrup
-60ml Mango Juice
-45ml Sour Mix
+15ml Guava Syrup
+60ml Sour Mix
 Dried Lemon Garnish
 
-# Tropical Blue
+# Pineapple Coconut
 1/2 Salt Rim
 30ml Tequila
-15ml Blue Curaçao
-15ml Sour Mix
-45ml Colada Mix
+15ml Triple Sec
+30ml Sour Mix
+15ml Coconut Syrup
+30ml Pineapple Juice
+Dried Lemon Garnish
 
 # Watermelon Sugar
 1/2 Salt Rim
@@ -39,13 +40,13 @@ Dried Lemon Garnish
 15ml Watermelon Syrup
 60ml Sour Mix
 
-# Passionate Kiwi
+# Kiwi Apple
 1/2 Salt Rim
 30ml Tequila
 15ml Triple Sec
-15ml Passionfruit Syrup
-60ml Sour Mix
-15ml Kiwi Syrup
+30ml Kiwifruit Syrup
+60ml Apple Juice
+Dried Lemon Garnish
 
 # Pomegranate Margarita
 1/2 Salt Rim
@@ -61,12 +62,6 @@ Dried Lemon Garnish
 30ml Lychee Syrup
 45ml Sour Mix
 
-# Classic Mezcal Margarita
-1/2 Chili Salt Rim
-30ml Mezcal
-15ml Triple Sec
-60ml Sour Mix
-
 # Mezcalita
 1/2 Chili Salt Rim
 30ml Mezcal
@@ -75,29 +70,30 @@ Dried Lemon Garnish
 30ml Pineapple Juice
 15ml Sour Mix
 
-# Cadiliac
-1/2 Salt Rim
-30ml Tequila
-15ml Grand Marnier + 10ml to float
-60ml Sour Mix
-15ml Agave Syrup
-
 ## Cocktails
+
+# Batanga
+45ml Tequila
+15ml Sour Mix
+Top up Coke
+Dried or Fresh Lemon
+Tall Glass
 
 # Mexican Summer
 45ml Tequila
 30ml Sour Mix
 30ml Pineapple Juice
 20ml Mango Syrup
+Tall Glass
 
-# Peachy Ginger
+# Ginferno
 45ml Gin
-15ml Peach Syrup
 15ml Sour Mix
-4 drops Fomo
-15ml Tonic Water
-Top up Ginger Beer
-Dried Lemon Garnish
+1 Sprig Coriander
+2 slices Jalapeño
+10ml Jalapeño Brine
+Top up Cucumber Tonic
+Martini Glass, Strained
 
 # Passionfruit Caprioska
 45ml Vodka
@@ -105,24 +101,27 @@ Dried Lemon Garnish
 30ml Sour Mix
 2 Lemon Slices Muddled
 
-# Flamingo
+# Mai Tai
 30ml White Rum
-15ml Strawberry Liqueur
+15ml Malibu
 30ml Pineapple Juice
-45ml Colada Mix
-10ml Strawberry Syrup
+60ml Orange Juice
+10ml Grenadine Float
+Dried Lemon Garnish
 
 # Espresso Martini
 Double Shot Espresso
 30ml Gold Rum
 15ml Kahlua
 30ml Vanilla Syrup
+Martini Glass, Strained
 
 # Mexspresso Martini
 Double Shot Espresso
 30ml Tequila
 15ml Kahlua
 30ml Agave Syrup
+Martini Glass, Strained
 
 # Margarita Milkshake
 30ml Tequila
