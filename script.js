@@ -45,7 +45,7 @@ var parse_file = function (file_content) {
             case "":
                 break;
             default:
-                current_recipe += line + '\n';
+                current_recipe += line + "\n";
                 break;
         }
     }
@@ -68,8 +68,7 @@ var build_page = function () {
     var _loop_1 = function (i) {
         var category = categories[i];
         var fragment = document.createDocumentFragment();
-        var cat_element = fragment
-            .appendChild(document.createElement("li"));
+        var cat_element = fragment.appendChild(document.createElement("li"));
         cat_element.textContent = category;
         if (category == selected_category) {
             cat_element.classList.add("selected");
@@ -102,8 +101,7 @@ var build_recipes = function () {
     var _loop_2 = function (i) {
         var recipe_name = recipe_names[i];
         var fragment = document.createDocumentFragment();
-        var name_element = fragment
-            .appendChild(document.createElement("li"));
+        var name_element = fragment.appendChild(document.createElement("li"));
         name_element.textContent = recipe_name;
         if (recipe_name == selected_recipe) {
             name_element.classList.add("selected");
@@ -130,8 +128,7 @@ var show_recipe = function () {
     for (var i = 0; i < recipe_lines.length; i++) {
         var line = recipe_lines[i];
         var fragment = document.createDocumentFragment();
-        var line_element = fragment
-            .appendChild(document.createElement("p"));
+        var line_element = fragment.appendChild(document.createElement("p"));
         line_element.textContent = line;
         recipeElement === null || recipeElement === void 0 ? void 0 : recipeElement.appendChild(line_element);
     }
@@ -148,7 +145,8 @@ scroll_down === null || scroll_down === void 0 ? void 0 : scroll_down.addEventLi
     function scroll_step(timestamp) {
         var elapsed = timestamp - start_time;
         var progress = Math.min(elapsed / duration, 1);
-        recipesElement.scrollTop = current_scroll + (target_scroll - current_scroll) * progress;
+        recipesElement.scrollTop =
+            current_scroll + (target_scroll - current_scroll) * progress;
         if (progress < 1) {
             requestAnimationFrame(scroll_step);
         }
@@ -166,7 +164,8 @@ scroll_up === null || scroll_up === void 0 ? void 0 : scroll_up.addEventListener
     function scroll_step(timestamp) {
         var elapsed = timestamp - start_time;
         var progress = Math.min(elapsed / duration, 1);
-        recipesElement.scrollTop = current_scroll + (target_scroll - current_scroll) * progress;
+        recipesElement.scrollTop =
+            current_scroll + (target_scroll - current_scroll) * progress;
         if (progress < 1) {
             requestAnimationFrame(scroll_step);
         }
