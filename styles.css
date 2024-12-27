@@ -9,11 +9,31 @@ body {
   color: white;
 }
 
+/* Differentiate between desktop and mobile */
+.desktop_wrapper {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .desktop_wrapper {
+    display: block;
+  }
+}
+
+.mobile_wrapper {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .mobile_wrapper {
+    display: none;
+  }
+}
+
+/* Desktop */
 ul {
   list-style-type: none;
 }
-
-.wrapper {}
 
 #categories {
   display: flex;
@@ -83,4 +103,62 @@ ul {
 #recipe {
   flex-grow: 1;
   text-align: center;
+}
+
+/* Mobile */
+.mobile_body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#mobile_recipe_wrapper {
+  height: 60%;
+}
+
+#mobile_recipe {
+  flex-grow: 1;
+  height: 100%;
+  text-align: center;
+}
+
+#mobile_recipes {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-left: 0px;
+}
+
+#mobile_categories {
+  flex-grow: 0;
+  /* padding-bottom: 10px; */
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-left: 0px;
+}
+
+.mobile_selected {
+  background-color: purple;
+}
+
+.mobile_button {
+  margin: 5px;
+  width: 220px;
+  min-height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  transition: transform 0.5s;
+}
+
+.mobile_selected {
+  /* color: blue; */
+  background-color: purple;
+  transform: scale(1.2);
 }

@@ -54,14 +54,14 @@ var parse_file = function (file_content) {
 };
 var file_content = load_file(recipes_file);
 var recipes = parse_file(file_content);
-console.log(recipes);
-var categoriesElement = document.getElementById("categories");
-var recipesElement = document.getElementById("recipes");
-var recipeElement = document.getElementById("recipe");
 var categories = Object.keys(recipes);
 var selected_category = categories[0];
 var recipe_names = Object.keys(recipes[selected_category]);
 var selected_recipe = recipe_names[0];
+// Desktop site
+var categoriesElement = document.getElementById("categories");
+var recipesElement = document.getElementById("recipes");
+var recipeElement = document.getElementById("recipe");
 var build_page = function () {
     // Clear existing elements and rebuild
     // categoriesElement.innerHTML = "";
@@ -172,3 +172,82 @@ scroll_up === null || scroll_up === void 0 ? void 0 : scroll_up.addEventListener
     }
     requestAnimationFrame(scroll_step);
 });
+// Mobile site
+var categoriesElementMobile = document.getElementById("mobile_categories");
+var recipesElementMobile = document.getElementById("mobile_recipes");
+var recipeElementMobile = document.getElementById("mobile_recipe");
+var build_mobile_page = function () {
+    // Clear existing elements and rebuild
+    // categoriesElement.innerHTML = "";
+    var _loop_3 = function (i) {
+        var category = categories[i];
+        var fragment = document.createDocumentFragment();
+        var cat_element = fragment.appendChild(document.createElement("li"));
+        cat_element.textContent = category;
+        // TODO: Replace class names with custom ones for mobile site, and add separate CSS rules to them.
+        if (category == selected_category) {
+            cat_element.classList.add("mobile_selected");
+        }
+        cat_element.classList.add("mobile_category");
+        cat_element.classList.add("mobile_button");
+        cat_element.onclick = function (e) {
+            categoriesElementMobile === null || categoriesElementMobile === void 0 ? void 0 : categoriesElementMobile.getElementsByClassName("mobile_selected")[0].classList.remove("mobile_selected");
+            selected_category = category;
+            var element = e.target;
+            element.classList.add("mobile_selected");
+            recipe_names = Object.keys(recipes[selected_category]);
+            selected_recipe = recipe_names[0];
+            // recipesElement.scrollTop = 0;
+            // build_page();
+            build_mobile_recipes();
+        };
+        categoriesElementMobile === null || categoriesElementMobile === void 0 ? void 0 : categoriesElementMobile.appendChild(cat_element);
+        console.log(categoriesElementMobile);
+    };
+    for (var i = 0; i < categories.length; i++) {
+        _loop_3(i);
+    }
+    console.log("build_mobile_page is called");
+    // console.log("Recipe names:");
+    // console.log(recipe_names);
+    build_mobile_recipes();
+    // recipeElement.innerHTML = recipes[selected_category][selected_recipe];
+};
+var build_mobile_recipes = function () {
+    recipesElementMobile.innerHTML = "";
+    var _loop_4 = function (i) {
+        var recipe_name = recipe_names[i];
+        var fragment = document.createDocumentFragment();
+        var name_element = fragment.appendChild(document.createElement("li"));
+        name_element.textContent = recipe_name;
+        if (recipe_name == selected_recipe) {
+            name_element.classList.add("mobile_selected");
+        }
+        name_element.classList.add("mobile_recipe_button");
+        name_element.classList.add("mobile_button");
+        name_element.onclick = function (e) {
+            recipesElementMobile === null || recipesElementMobile === void 0 ? void 0 : recipesElementMobile.getElementsByClassName("mobile_selected")[0].classList.remove("mobile_selected");
+            selected_recipe = recipe_name;
+            var element = e.target;
+            element.classList.add("mobile_selected");
+            show_mobile_recipe();
+        };
+        recipesElementMobile === null || recipesElementMobile === void 0 ? void 0 : recipesElementMobile.appendChild(name_element);
+    };
+    for (var i = 0; i < recipe_names.length; i++) {
+        _loop_4(i);
+    }
+    show_mobile_recipe();
+};
+var show_mobile_recipe = function () {
+    recipeElementMobile.innerHTML = "";
+    var recipe_lines = recipes[selected_category][selected_recipe].split(/\r?\n/);
+    for (var i = 0; i < recipe_lines.length; i++) {
+        var line = recipe_lines[i];
+        var fragment = document.createDocumentFragment();
+        var line_element = fragment.appendChild(document.createElement("p"));
+        line_element.textContent = line;
+        recipeElementMobile === null || recipeElementMobile === void 0 ? void 0 : recipeElementMobile.appendChild(line_element);
+    }
+};
+build_mobile_page();

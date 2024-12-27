@@ -58,17 +58,17 @@ const parse_file = function (file_content: String): Object {
 const file_content = load_file(recipes_file);
 const recipes = parse_file(file_content);
 
-console.log(recipes);
-
-var categoriesElement = document.getElementById("categories");
-var recipesElement = document.getElementById("recipes")!;
-var recipeElement = document.getElementById("recipe")!;
-
 let categories = Object.keys(recipes);
 let selected_category = categories[0];
 
 let recipe_names = Object.keys(recipes[selected_category]);
 let selected_recipe = recipe_names[0];
+
+// Desktop site
+
+var categoriesElement = document.getElementById("categories");
+var recipesElement = document.getElementById("recipes")!;
+var recipeElement = document.getElementById("recipe")!;
 
 const build_page = function (): void {
   // Clear existing elements and rebuild
@@ -207,3 +207,100 @@ scroll_up?.addEventListener("click", function () {
 
   requestAnimationFrame(scroll_step);
 });
+
+// Mobile site
+var categoriesElementMobile = document.getElementById("mobile_categories");
+var recipesElementMobile = document.getElementById("mobile_recipes")!;
+var recipeElementMobile = document.getElementById("mobile_recipe")!;
+
+const build_mobile_page = function (): void {
+  // Clear existing elements and rebuild
+  // categoriesElement.innerHTML = "";
+
+  for (let i = 0; i < categories.length; i++) {
+    const category = categories[i];
+
+    const fragment = document.createDocumentFragment();
+    const cat_element = fragment.appendChild(document.createElement("li"));
+    cat_element.textContent = category;
+    // TODO: Replace class names with custom ones for mobile site, and add separate CSS rules to them.
+    if (category == selected_category) {
+      cat_element.classList.add("mobile_selected");
+    }
+    cat_element.classList.add("mobile_category");
+    cat_element.classList.add("mobile_button");
+    cat_element.onclick = (e) => {
+      categoriesElementMobile
+        ?.getElementsByClassName("mobile_selected")[0]
+        .classList.remove("mobile_selected");
+      selected_category = category;
+      const element = e.target as HTMLElement;
+      element.classList.add("mobile_selected");
+
+      recipe_names = Object.keys(recipes[selected_category]);
+      selected_recipe = recipe_names[0];
+      // recipesElement.scrollTop = 0;
+
+      // build_page();
+      build_mobile_recipes();
+    };
+    categoriesElementMobile?.appendChild(cat_element);
+    console.log(categoriesElementMobile);
+  }
+
+  console.log("build_mobile_page is called");
+
+  // console.log("Recipe names:");
+  // console.log(recipe_names);
+
+  build_mobile_recipes();
+
+  // recipeElement.innerHTML = recipes[selected_category][selected_recipe];
+};
+
+const build_mobile_recipes = function () {
+  recipesElementMobile.innerHTML = "";
+
+  for (let i = 0; i < recipe_names.length; i++) {
+    const recipe_name = recipe_names[i];
+
+    const fragment = document.createDocumentFragment();
+    const name_element = fragment.appendChild(document.createElement("li"));
+    name_element.textContent = recipe_name;
+    if (recipe_name == selected_recipe) {
+      name_element.classList.add("mobile_selected");
+    }
+    name_element.classList.add("mobile_recipe_button");
+    name_element.classList.add("mobile_button");
+    name_element.onclick = (e) => {
+      recipesElementMobile
+        ?.getElementsByClassName("mobile_selected")[0]
+        .classList.remove("mobile_selected");
+      selected_recipe = recipe_name;
+      const element = e.target as HTMLElement;
+      element.classList.add("mobile_selected");
+
+      show_mobile_recipe();
+    };
+    recipesElementMobile?.appendChild(name_element);
+  }
+
+  show_mobile_recipe();
+};
+
+const show_mobile_recipe = function () {
+  recipeElementMobile.innerHTML = "";
+
+  const recipe_lines =
+    recipes[selected_category][selected_recipe].split(/\r?\n/);
+  for (let i = 0; i < recipe_lines.length; i++) {
+    const line = recipe_lines[i];
+
+    const fragment = document.createDocumentFragment();
+    const line_element = fragment.appendChild(document.createElement("p"));
+    line_element.textContent = line;
+    recipeElementMobile?.appendChild(line_element);
+  }
+};
+
+build_mobile_page();
