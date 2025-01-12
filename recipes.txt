@@ -1,6 +1,6 @@
-## Margaritas
+# Margaritas
 
-# Classic Margarita
+## Classic Margarita
 1/2 Salt Rim
 30ml Tequila
 15ml Triple Sec
@@ -8,14 +8,14 @@
 10ml Agave Syrup (optional)
 Dried Lemon Garnish
 
-# Fruit Margarita
+## Fruit Margarita
 No Rim
 30ml Tequila
 15ml Triple Sec
 30ml Sour Mix
 30ml Fruit Syrup
 
-# Spicy Guava
+## Spicy Guava
 1/2 Chili Salt Rim
 30ml Tequila
 15ml Triple Sec
@@ -24,7 +24,7 @@ No Rim
 60ml Sour Mix
 Dried Lemon Garnish
 
-# Pineapple Coconut
+## Pineapple Coconut
 1/2 Salt Rim
 30ml Tequila
 15ml Triple Sec
@@ -33,14 +33,14 @@ Dried Lemon Garnish
 30ml Pineapple Juice
 Dried Lemon Garnish
 
-# Watermelon Sugar
+## Watermelon Sugar
 1/2 Salt Rim
 30ml Tequila
 15ml Watermelon Liqueur
 15ml Watermelon Syrup
 60ml Sour Mix
 
-# Kiwi Apple
+## Kiwi Apple
 1/2 Salt Rim
 30ml Tequila
 15ml Triple Sec
@@ -48,7 +48,7 @@ Dried Lemon Garnish
 60ml Apple Juice
 Dried Lemon Garnish
 
-# Pomegranate Margarita
+## Pomegranate Margarita
 1/2 Salt Rim
 30ml Tequila
 15ml Triple Sec
@@ -56,13 +56,13 @@ Dried Lemon Garnish
 10ml Agave Syrup
 60ml Sour Mix
 
-# Lychee Margarita
+## Lychee Margarita
 30ml Tequila
 15ml Triple Sec
 30ml Lychee Syrup
 45ml Sour Mix
 
-# Mezcalita
+## Mezcalita
 1/2 Chili Salt Rim
 30ml Mezcal
 15ml Triple Sec
@@ -70,7 +70,7 @@ Dried Lemon Garnish
 30ml Pineapple Juice
 15ml Sour Mix
 
-# Mango Picante (old)
+## Mango Picante (old)
 1/2 Chili Salt Rim
 30ml Tequila
 15ml Triple Sec
@@ -79,23 +79,23 @@ Dried Lemon Garnish
 60ml Mango Juice
 45ml Sour Mix
 
-## Cocktails
+# Cocktails
 
-# Batanga
+## Batanga
 45ml Tequila
 15ml Sour Mix
 Top up Coke
 Dried or Fresh Lemon
 Tall Glass
 
-# Mexican Summer
+## Mexican Summer
 45ml Tequila
 30ml Sour Mix
 30ml Pineapple Juice
 20ml Mango Syrup
 Tall Glass
 
-# Ginferno
+## Ginferno
 45ml Gin
 15ml Sour Mix
 1 Sprig Coriander
@@ -104,13 +104,13 @@ Tall Glass
 Top up Cucumber Tonic
 Martini Glass, Strained
 
-# Passionfruit Caprioska
+## Passionfruit Caprioska
 45ml Vodka
 30ml Passionfruit Syrup
 30ml Sour Mix
 2 Lemon Slices Muddled
 
-# Mai Tai
+## Mai Tai
 30ml White Rum
 15ml Malibu
 30ml Pineapple Juice
@@ -118,89 +118,89 @@ Martini Glass, Strained
 10ml Grenadine Float
 Dried Lemon Garnish
 
-# Espresso Martini
+## Espresso Martini
 Double Shot Espresso
 30ml Gold Rum
 15ml Kahlua
 30ml Vanilla Syrup
 Martini Glass, Strained
 
-# Mexspresso Martini
+## Mexspresso Martini
 Double Shot Espresso
 30ml Tequila
 15ml Kahlua
 30ml Agave Syrup
 Martini Glass, Strained
 
-# Margarita Milkshake
+## Margarita Milkshake
 30ml Tequila
 30ml Triple Sec
 2 scoops Vanilla Ice Cream
 60ml Milk
 30ml Strawberry Syrup
 
-## Sangrias
+# Sangrias
 
-# Red Sangria Glass
+## Red Sangria Glass
 30ml Orange Juice
 15ml Triple Sec
 15ml Sugar Syrup
 15ml Sour Mix
 100ml Red Wine
 
-# Red Sangria Jug
+## Red Sangria Jug
 90ml Orange Juice
 60ml Triple Sec
 60ml Sugar Syrup
 60ml Sour Mix
 300ml Red Wine
 
-# White Sangria Glass
+## White Sangria Glass
 30ml Pineapple Juice
 15ml Triple Sec
 15ml Sugar Syrup
 15ml Sour Mix
 100ml White Wine
 
-# White Sangria Jug
+## White Sangria Jug
 90ml Pineapple Juice
 60ml Triple Sec
 60ml Sugar Syrup
 60ml Sour Mix
 300ml White Wine
 
-# Rosé Sangria Glass
+## Rosé Sangria Glass
 30ml Cranberry Juice
 15ml Triple Sec
 15ml Sugar Syrup
 15ml Sour Mix
 100ml Rosé Wine
 
-# Rosé Sangria Jug
+## Rosé Sangria Jug
 90ml Cranberry Juice
 60ml Triple Sec
 60ml Sugar Syrup
 60ml Sour Mix
 300ml Rosé Wine
 
-## Mocktails
+# Mocktails
 
-# M-7
+## M-7
 Swirl Berry Syrup in glass
 30ml Sugar Syrup
 Top up M7 Mix
 
-# Agua Berry Fresca
+## Agua Berry Fresca
 15ml Watermelon Syrup
 15ml Strawberry Syrup
 1/2 Top up Soda Water
 1/2 Top up Lemonade
 
-# Colada
+## Colada
 30ml Pineapple Juice
 Top up Colada Mix
 
-# Summer Bliss
+## Summer Bliss
 30ml Passionfruit Syrup
 15ml Sour Mix
 60ml Pineapple Juice
@@ -208,22 +208,22 @@ Top up Ginger Ale
 Dried Lemon Garnish
 Use shaker glass for first three ingredients
 
-## Other
+# Other
 
-# Michelada
+## Michelada
 Salt Rim
 60ml Tomato Juice
 60ml Lemon Juice
 4 Limes
 Top up Sol
 
-# Cuba Libre
+## Cuba Libre
 Tall Glass
 30ml Gold Rum
 30ml Lime Juice
 30ml Sugar Syrup
 Top up Coke
 
-# Mexican Hot Chocolate
+## Mexican Hot Chocolate
 3 heaped tablespoons Hot Chocolate Powder
 Top up Frothed Milk

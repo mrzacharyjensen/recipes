@@ -26,21 +26,21 @@ var parse_file = function (file_content) {
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
         switch (line.slice(0, 2)) {
-            case "##":
+            case "# ":
                 if (current_category != "") {
                     recipes[current_category][current_recipe_name] = current_recipe;
                     current_recipe = "";
                     current_recipe_name = "";
                 }
-                current_category = line.slice(3);
+                current_category = line.slice(2);
                 recipes[current_category] = {};
                 break;
-            case "# ":
+            case "##":
                 if (current_recipe_name != "") {
                     recipes[current_category][current_recipe_name] = current_recipe;
                     current_recipe = "";
                 }
-                current_recipe_name = line.slice(2);
+                current_recipe_name = line.slice(3);
                 break;
             case "":
                 break;
